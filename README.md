@@ -19,13 +19,15 @@ This project demonstrates the **attack and defense** of the **SMB service** on a
 ---
 
 ## 📂 Repository Structure
+- /Phase1/ - Attack screenshots and scripts
+- /Phase2/ - Splunk dashboards
+- /Phase3/ - Defense steps and test results
 
-
-## 🔧 Setup
-- **Victim:** Metasploitable3 VM  
-- **Attacker:** Kali Linux  
-- **SIEM:** Splunk
-
+## ⚙️ Setup Instructions
+### Prerequisites
+- **Victim Machine:** [Metasploitable3](https://github.com/rapid7/metasploitable3) (IP: `[Your_VM_IP]`)  
+- **Attacker Machine:** Kali Linux (Metasploit, Python 3.10+)  
+- **SIEM:** Splunk Enterprise (Free license) 
 
 ## 🚀 Key Results
 - Successfully exploited SMB using EternalBlue  
