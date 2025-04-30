@@ -37,6 +37,5 @@ This project demonstrates the **attack and defense** of the **SMB service** on a
 - Successfully exploited SMB using EternalBlue  
 - Created attack visualizations in Splunk  
 - Fixed vulnerabilities by:  
-  - Patching MS17-010  
-  - Disabling SMBv1  
-  - Adding firewall rules
+  - SSH hardening.
+  - Key-Based Authentication.
