@@ -14,7 +14,7 @@ This project demonstrates the **attack and defense** of the **SMB service** on a
 **Key phases:**  
 1. **Phase 1:** Compromise SMB using Metasploit and a custom Python script.  
 2. **Phase 2:** Analyze attacks using Splunk (SIEM).  
-3. **Phase 3:** Implement defenses (patching, hardening) and validate effectiveness.  
+3. **Phase 3:** Implement defenses (SSH hardening, Key-Based Authentication) and validate effectiveness.  
 
 ---
 
