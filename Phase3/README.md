@@ -2,6 +2,10 @@
 
 ![](Phase3/1.png)
 
+
+
+
+
 **Commands Executed**:  
 ```bash
 systemctl status ssh          # Verify SSH is running  
