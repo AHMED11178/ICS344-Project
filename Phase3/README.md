@@ -13,6 +13,8 @@ sudo cat /etc/ssh/sshd_config    # Review weak settings
 ### **2. Implement SSH Hardening**
 
 ![](./2.png)
+![](./3.png)
+![](./4.png)
 
 Changes Made:
 
