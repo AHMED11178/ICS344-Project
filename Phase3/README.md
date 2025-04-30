@@ -1,4 +1,7 @@
 ### **1. Analyze Original SSH Vulnerability**  
+
+![](Phase3/1.png)
+
 **Commands Executed**:  
 ```bash
 systemctl status ssh          # Verify SSH is running  
@@ -10,4 +13,4 @@ sudo cat /etc/ssh/sshd_config # Review weak settings
 
 
 
-![](Phase3/1.png)
+
