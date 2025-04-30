@@ -1,6 +1,6 @@
 ### **1. Analyze Original SSH Vulnerability**  
 
-![](Phase3/1.png)
+![](./1.png)
 
 
 
