@@ -7,5 +7,3 @@
 systemctl status ssh             # Verify SSH is running  
 ssh -V                           # Check vulnerable version  
 sudo cat /etc/ssh/sshd_config    # Review weak settings
-
-
