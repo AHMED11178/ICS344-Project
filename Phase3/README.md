@@ -73,3 +73,16 @@ ssh-copy-id -i ~/.ssh/metasploitable3_key.pub -p 2222 msfadmin@192.168.56.101
 
 
 ssh -i ~/.ssh/metasploitable3_key -p 2222 msfadmin@192.168.56.101  
+
+
+
+### 3.1 Test Defenses
+
+Attacks to Re-Run:
+
+Metasploit Brute-Force:
+
+
+
+Hydra Brute-Force:
+
