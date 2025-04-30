@@ -80,9 +80,4 @@ ssh -i ~/.ssh/metasploitable3_key -p 2222 msfadmin@192.168.56.101
 
 Attacks to Re-Run:
 
-Metasploit Brute-Force:
-
-
-
-Hydra Brute-Force:
-
+ ![](./12.png)
