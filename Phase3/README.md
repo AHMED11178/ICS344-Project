@@ -11,7 +11,7 @@ We have deployed two complementary strategies to secure the SSH service on Metas
 ### **1.1 Analyze Original SSH Vulnerability**  
 
 
-![](./7.png)
+![](./Analyze Original SSH Vulnerability.png)
 
 **Commands Executed**:  
 ```bash
