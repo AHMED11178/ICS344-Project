@@ -56,16 +56,16 @@ sudo service ssh restart
 Steps:
 
 - Generate Key Pair (Kali Linux):
+![](./5.png)
 
-bash
 ssh-keygen -t rsa -b 4096 -f ~/.ssh/metasploitable3_key  
 
 - Copy Public Key to Metasploitable3:
 
-bash
+
 ssh-copy-id -i ~/.ssh/metasploitable3_key.pub -p 2222 msfadmin@192.168.56.101  
 
 - Test Login:
 
-bash
+
 ssh -i ~/.ssh/metasploitable3_key -p 2222 msfadmin@192.168.56.101  
