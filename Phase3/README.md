@@ -1,4 +1,14 @@
-### **1. Analyze Original SSH Vulnerability**  
+# *Defense Mechanisms Implemented*
+
+We have deployed two complementary strategies to secure the SSH service on Metasploitable3:
+
+1. SSH Configuration Hardening
+2. Key-Based Authentication
+
+
+
+### **1.1 Analyze Original SSH Vulnerability**  
+
 
 ![](./7.png)
 
@@ -10,7 +20,8 @@ sudo cat /etc/ssh/sshd_config    # Review weak settings
 ```
 
 
-### **2. Implement SSH Hardening**
+### **1.2 Implement SSH Hardening**
+
 
 ![](./1.png)
 ![](./2.png)
@@ -37,3 +48,7 @@ sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bak
 sudo nano /etc/ssh/sshd_config  # Apply changes  
 sudo service ssh restart
 ```
+
+
+### **2.1 Set Up Key-Based Authentication**
+
