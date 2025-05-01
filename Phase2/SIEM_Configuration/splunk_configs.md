@@ -1,6 +1,6 @@
 # Splunk Setup for Kali + Metasploitable3 Attack Lab
 
-This guide explains how to set up Splunk on your **host machine** to collect and analyze logs from:
+This guide explains how we sat up Splunk on our **host machine** to collect and analyze logs from:
 - **Kali Linux (Attacker)**
 - **Metasploitable3 (Victim)**
 
