@@ -36,4 +36,3 @@ This guide explains how to set up Splunk on your **host machine** to collect and
 - From Kali, verify connection to host:
   ```bash
   ping <host_machine_ip>
-
