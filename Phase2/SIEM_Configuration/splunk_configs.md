@@ -60,3 +60,8 @@ Splunk is installed and running on the **Windows host machine**.
 ### 4️⃣ Metasploitable3 Log Forwarding
 
 - Edited `/etc/rsyslog.conf` on Metasploitable3:
+- by adding *.* @<host-ip>:514
+- then saving it
+- restart rsyslog
+- Testing it by logging a test
+![Screenshot](SplunkMetasploitable)
