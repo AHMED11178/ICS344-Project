@@ -67,7 +67,7 @@ Splunk is installed and running on the **Windows host machine**.
 - Screenshoot:
 ![Screenshot](SplunkMetasploitable)
 
-### 5 Kali Linux Log Forwarding
+### 5️⃣ Kali Linux Log Forwarding
 
 - We did the same steps in 4
 - Screenshot:
