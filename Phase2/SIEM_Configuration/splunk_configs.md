@@ -71,5 +71,5 @@ Splunk is installed and running on the **Windows host machine**.
 
 - We did the same steps in 4
 - Screenshot:
-![Screenshot](SplunkKali)
+![Screenshot](SplunkKali.png)
 
