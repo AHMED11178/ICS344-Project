@@ -64,4 +64,12 @@ Splunk is installed and running on the **Windows host machine**.
 - then saving it
 - restart rsyslog
 - Testing it by logging a test
+- Screenshoot:
 ![Screenshot](SplunkMetasploitable)
+
+### 5 Kali Linux Log Forwarding
+
+- We did the same steps in 4
+- Screenshot:
+![Screenshot](SplunkKali)
+
