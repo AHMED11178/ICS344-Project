@@ -1,38 +1,60 @@
-# Splunk Setup for Kali + Metasploitable3 Attack Lab
+# Splunk Setup Summary: Kali Linux + Metasploitable3 Attack Lab (Windows Host)
 
-This guide explains how we sat up Splunk on our **host machine** to collect and analyze logs from:
-- **Kali Linux (Attacker)**
-- **Metasploitable3 (Victim)**
+This document summarizes the completed setup of Splunk for capturing and analyzing attack logs between:
+- **Kali Linux (Attacker VM)**
+- **Metasploitable3 (Victim VM)**
 
-## 🛠 Requirements
-- Host machine with Windows/macOS/Linux (8GB+ RAM recommended)
-- VirtualBox or VMware with:
-  - Kali Linux VM
-  - Metasploitable3 VM
-
-## ⚙️ Steps
+Splunk is installed and running on the **Windows host machine**.
 
 ---
 
-### 1️⃣ Install Splunk on Host
+## ✅ Setup Overview
 
-1. Download Splunk Enterprise Free:  
-   https://www.splunk.com/en_us/download.html
-
-2. Choose the version for your host OS (Windows/macOS/Linux).
-
-3. Install Splunk following the installer instructions.
-
-4. Start Splunk and access it in your browser:  
-   `http://localhost:8000`
-
-5. Create an admin username and password when prompted.
+- **Host OS**: Windows 10
+- **Virtualization**: VirtualBox
+- **Virtual Machines**:
+  - Kali Linux (attacker)
+  - Metasploitable3 (victim)
+- **Splunk**: Installed on Windows host, accessed via `http://localhost:8000`
 
 ---
 
-### 2️⃣ Set Up Networking Between Host + VMs
+## 🔧 Configuration Details
 
-- In VirtualBox/VMware, configure **Host-Only Adapter** or **Bridged Network** for both Kali and Metasploitable3.
-- From Kali, verify connection to host:
-  ```bash
-  ping <host_machine_ip>
+### 1️⃣ Splunk Installation (Completed)
+
+- Downloaded Splunk Enterprise Free from:  
+  https://www.splunk.com/en_us/download.html
+
+- Installed on Windows host.
+
+- Started Splunk service and accessed the web interface at:  
+  `http://localhost:8000`
+
+- Created admin account and set up initial configurations.
+
+---
+
+### 2️⃣ Networking Configuration
+
+- Configured **Host-Only Adapter** (or Bridged Network) for both Kali and Metasploitable3.
+
+- Verified network connectivity:
+  - Kali can ping host (`ping <host_ip>`)
+  - Metasploitable3 can ping host
+
+---
+
+### 3️⃣ Splunk Data Input Setup
+
+- In Splunk Web:
+  - Went to **Settings → Data Inputs → UDP → New Local UDP**.
+  - Configured port `514` (standard syslog).
+  - Set sourcetype to `syslog`.
+  - Created index named `attack_logs`.
+
+---
+
+### 4️⃣ Metasploitable3 Log Forwarding
+
+- Edited `/etc/rsyslog.conf` on Metasploitable3:
