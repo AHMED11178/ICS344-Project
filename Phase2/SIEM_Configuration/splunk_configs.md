@@ -52,6 +52,7 @@ Splunk is installed and running on the **Windows host machine**.
   - Configured port `514` (standard syslog).
   - Set sourcetype to `syslog`.
   - Created index named `attack_logs`.
+    ![Screenshot](Phase2/SIEM_Configuration/UDP_config)
 
 ---
 
