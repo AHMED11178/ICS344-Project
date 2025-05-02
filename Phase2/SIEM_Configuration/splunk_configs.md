@@ -37,7 +37,7 @@ Splunk is installed and running on the **Windows host machine**.
 
 ### 2️⃣ Networking Configuration
 
-- Configured **Host-Only Adapter** (or Bridged Network) for both Kali and Metasploitable3.
+- Configured **Host-Only Adapter** for both Kali and Metasploitable3.
 
 - Verified network connectivity:
   - Kali can ping host (`ping <host_ip>`)
@@ -47,7 +47,7 @@ Splunk is installed and running on the **Windows host machine**.
 
 # Splunk Universal Forwarder Setup (Completed)
 
-This document summarizes the steps I completed to install and configure the Splunk Universal Forwarder on both the Kali Linux and **Metasploitable3** virtual machines, connecting them successfully to my Splunk Enterprise instance running on the host machine.
+Now this will summarizes the steps we completed to install and configure the Splunk Universal Forwarder on both the Kali Linux and **Metasploitable3** virtual machines, connecting them successfully to my Splunk Enterprise instance running on the host machine.
 
 ---
 
@@ -134,7 +134,7 @@ sudo /opt/splunkforwarder/bin/splunk restart
 
 ## Summary
 
-I have successfully:
+we have successfully:
 
 * Installed the Splunk Universal Forwarder using `dpkg` on both Kali and Metasploitable3
 * Configured them to forward log data to Splunk Enterprise on the host
