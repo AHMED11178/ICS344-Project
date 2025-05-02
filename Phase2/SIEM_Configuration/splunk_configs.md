@@ -32,6 +32,24 @@ Splunk is installed and running on the **Windows host machine**.
   `http://localhost:8000`
 
 - Created admin account and set up initial configurations.
+* Confirmed that **Receiving** on port **9997** was enabled in Splunk Enterprise:
+
+  * Went to **Settings > Forwarding and Receiving > Configure Receiving**.
+  * added port **9997** as an active receiving port.
+
+* Used the **Search & Reporting** app to check for incoming data:
+
+  * Ran searches like:
+
+    ```spl
+    index=* host=<kali-ip>
+    index=* host=<metasploitable3-ip>
+    ```
+  * Confirmed that events and logs from both Kali and Metasploitable3 appeared in the search results.
+
+* Confirmed that data was being parsed properly (no binary data issues) and matched the expected `sourcetype` (such as `syslog`).
+
+* Verified that forwarder status appeared under **Monitoring Console > Forwarders** to ensure the Splunk Enterprise instance was recognizing the connections.
 
 ---
 
@@ -139,3 +157,4 @@ we have successfully:
 * Installed the Splunk Universal Forwarder using `dpkg` on both Kali and Metasploitable3
 * Configured them to forward log data to Splunk Enterprise on the host
 * Verified that incoming log data appears correctly in the Splunk web interface
+
