@@ -36,16 +36,18 @@ Splunk is installed and running on the **Windows host machine**.
 
   * Went to **Settings > Forwarding and Receiving > Configure Receiving**.
   * added port **9997** as an active receiving port.
+  ![Screenshot](splunk_receive.png)
+  !![Screenshot](9997_receive.png)
 
 * Used the **Search & Reporting** app to check for incoming data:
 
-  * Ran searches like:
+  * Ran searches to look for the test logs:
 
     ```spl
-    index=* host=<kali-ip>
-    index=* host=<metasploitable3-ip>
+    index=*
     ```
   * Confirmed that events and logs from both Kali and Metasploitable3 appeared in the search results.
+  ![Screenshot](splunk-9997.png)
 
 * Confirmed that data was being parsed properly (no binary data issues) and matched the expected `sourcetype` (such as `syslog`).
 
