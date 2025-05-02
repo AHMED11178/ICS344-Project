@@ -51,31 +51,15 @@ A stacked bar chart showing counts of failed and successful SSH logins.
 **SPL Query:**
 
 ```spl
-index=* sourcetype=syslog "sshd" | stats count by action | chart count over action
+index=* sourcetype=syslog "sshd" "Failed password" OR "Accepted password"
+| eval action = if(like(_raw, "%Failed password%"), "failed", "successful")
+| stats count by action
 ```
 
 **What it reveals:**
 
 * Demonstrates how many attempts failed before success.
 * Helps visualize the brute-force nature of the attack (many failures, few successes).
-
----
-
-## Visualization 4: Syslog Events Timeline
-
-**Description:**
-A timeline visualization plotting general syslog events across both attacker and victim systems.
-
-**SPL Query:**
-
-```spl
-index=* sourcetype=syslog | timechart count by host
-```
-
-**What it reveals:**
-
-* Correlation between attack activities and system responses.
-* Any system warnings or errors triggered during the attack.
 
 ---
 
