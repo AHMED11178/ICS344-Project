@@ -49,8 +49,6 @@ Splunk is installed and running on the **Windows host machine**.
   * Confirmed that events and logs from both Kali and Metasploitable3 appeared in the search results.
   ![Screenshot](splunk-9997.png)
 
-* Confirmed that data was being parsed properly (no binary data issues) and matched the expected `sourcetype` (such as `syslog`).
-
 * Verified that forwarder status appeared under **Monitoring Console > Forwarders** to ensure the Splunk Enterprise instance was recognizing the connections.
 
 ---
