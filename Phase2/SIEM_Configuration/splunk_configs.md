@@ -45,32 +45,99 @@ Splunk is installed and running on the **Windows host machine**.
 
 ---
 
-### 3️⃣ Splunk Data Input Setup
+# Splunk Universal Forwarder Setup (Completed)
 
-- In Splunk Web:
-  - Went to **Settings → Data Inputs → UDP → New Local UDP**.
-  - Configured port `514` (standard syslog).
-  - Set sourcetype to `syslog`.
-  - Created index named `attack_logs`.
-  - Screenshot:
-    ![Screenshot](UDP_config)
+This document summarizes the steps I completed to install and configure the Splunk Universal Forwarder on both the Kali Linux and **Metasploitable3** virtual machines, connecting them successfully to my Splunk Enterprise instance running on the host machine.
 
 ---
 
-### 4️⃣ Metasploitable3 Log Forwarding
+## What Was Done
 
-- Edited `/etc/rsyslog.conf` on Metasploitable3:
-- by adding *.* @<host-ip>:514
-- then saving it
-- restart rsyslog
-- Testing it by logging a test
-- Screenshoot:
-![Screenshot](SplunkMetasploitable)
+### ✅ Environment Preparation
 
-### 5️⃣ Kali Linux Log Forwarding
+* Splunk Enterprise was already installed and running on the host machine, listening on port **9997**.
+* Both the Kali Linux and Metasploitable3 VMs were set up in VirtualBox and configured to be on the same Host-Only or Bridged network to ensure they could communicate with the host.
 
-- We did the same steps in 4
-- Screenshot:
-![Screenshot](SplunkKali.png)
-- now we do the attack and try to analyze and visualize it
+### ✅ Downloaded and Installed Splunk Universal Forwarder
 
+* Downloaded the appropriate Splunk Universal Forwarder Debian package (`.deb`) for both VMs.
+* Installed on **both Kali and Metasploitable3** using:
+
+  ```bash
+  sudo dpkg -i splunkforwarder-<version>-linux-2.6-amd64.deb
+  ```
+
+### ✅ Accepted License and Enabled Boot Start
+
+On both VMs, ran:
+
+```bash
+sudo /opt/splunkforwarder/bin/splunk start --accept-license
+sudo /opt/splunkforwarder/bin/splunk enable boot-start
+```
+
+### ✅ Configured Forwarder Connections
+
+On both Kali and Metasploitable3, pointed the forwarder to the Splunk Enterprise host:
+
+```bash
+sudo /opt/splunkforwarder/bin/splunk add forward-server <splunk-host-ip>:9997
+```
+
+Verified the connection:
+
+```bash
+sudo /opt/splunkforwarder/bin/splunk list forward-server
+```
+
+### ✅ Defined Data Inputs
+
+Set up monitoring for key log files on both VMs:
+
+```bash
+sudo /opt/splunkforwarder/bin/splunk add monitor /var/log
+```
+
+Or more specifically:
+
+```bash
+sudo /opt/splunkforwarder/bin/splunk add monitor /var/log/syslog
+sudo /opt/splunkforwarder/bin/splunk add monitor /var/log/auth.log
+```
+
+### ✅ Restarted Forwarder Services
+
+Restarted the Splunk Universal Forwarder on both VMs to apply changes:
+
+```bash
+sudo /opt/splunkforwarder/bin/splunk restart
+```
+
+### ✅ Verified Data in Splunk Enterprise
+
+* Checked in Splunk Enterprise under **Settings > Forwarding and Receiving > Configure Receiving** to ensure port **9997** was open.
+* Used **Search & Reporting** in Splunk to confirm logs were arriving:
+
+  ```spl
+  index=* host=<kali-ip>
+  index=* host=<metasploitable3-ip>
+  ```
+* Confirmed that logs from both VMs were visible and searchable.
+
+### ✅ Addressed Issues
+
+* Resolved network adapter and VirtualBox network configuration issues.
+* Ensured no firewall or port-blocking issues between the VMs and the host.
+* Focused only on the Splunk Universal Forwarder (avoiding `rsyslog`) to prevent binary data issues.
+
+---
+
+## Summary
+
+I have successfully:
+
+* Installed the Splunk Universal Forwarder using `dpkg` on both Kali and Metasploitable3
+* Configured them to forward log data to Splunk Enterprise on the host
+* Verified that incoming log data appears correctly in the Splunk web interface
+
+If needed, I can also document the troubleshooting steps or provide a network diagram of the setup.
