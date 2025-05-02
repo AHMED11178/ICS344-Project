@@ -31,7 +31,9 @@ A pie chart or bar chart showing the top source IP addresses attempting SSH conn
 **SPL Query:**
 
 ```spl
-index=* sourcetype=syslog "sshd" | top src_ip
+index=* sourcetype=syslog "sshd" "Failed password" OR "Accepted password"
+| rex field=_raw "from (?<src_ip>\d{1,3}(?:\.\d{1,3}){3}) port"
+| top src_ip
 ```
 
 **What it reveals:**
