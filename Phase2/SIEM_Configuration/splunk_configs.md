@@ -139,5 +139,3 @@ we have successfully:
 * Installed the Splunk Universal Forwarder using `dpkg` on both Kali and Metasploitable3
 * Configured them to forward log data to Splunk Enterprise on the host
 * Verified that incoming log data appears correctly in the Splunk web interface
-
-If needed, I can also document the troubleshooting steps or provide a network diagram of the setup.
