@@ -39,18 +39,6 @@ Splunk is installed and running on the **Windows host machine**.
   ![Screenshot](splunk_receive.png)
   !![Screenshot](9997_receive.png)
 
-* Used the **Search & Reporting** app to check for incoming data:
-
-  * Ran searches to look for the test logs:
-
-    ```spl
-    index=*
-    ```
-  * Confirmed that events and logs from both Kali and Metasploitable3 appeared in the search results.
-  ![Screenshot](splunk-9997.png)
-
-* Verified that forwarder status appeared under **Monitoring Console > Forwarders** to ensure the Splunk Enterprise instance was recognizing the connections.
-
 ---
 
 ### 2️⃣ Networking Configuration
@@ -137,10 +125,12 @@ sudo /opt/splunkforwarder/bin/splunk restart
 * Used **Search & Reporting** in Splunk to confirm logs were arriving:
 
   ```spl
-  index=* host=<kali-ip>
-  index=* host=<metasploitable3-ip>
+  index=*
   ```
 * Confirmed that logs from both VMs were visible and searchable.
+  ![Screenshot](splunk-9997.png)
+
+* Verified that forwarder status appeared under **Monitoring Console > Forwarders** to ensure the Splunk Enterprise instance was recognizing the connections.
 
 ### ✅ Addressed Issues
 
