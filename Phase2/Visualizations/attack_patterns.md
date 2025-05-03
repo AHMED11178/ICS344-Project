@@ -74,6 +74,8 @@ We compared data collected from both the attacker (Kali) and victim (Metasploita
 
 This comparison allowed us to map attacker actions to victim responses, confirming that the brute-force attack was successfully captured end-to-end.
 
+![screenshot](attack_compare.png)
+
 ---
 
 ## Deliverables
