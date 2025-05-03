@@ -84,5 +84,4 @@ This comparison allowed us to map attacker actions to victim responses, confirmi
 
 ✅ Screenshot(s) of Splunk visualizations (time charts, bar charts, pie charts) used to analyze and understand the attack patterns
 
-We will include these screenshots along with this explanation as part of our project deliverables.
 
