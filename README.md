@@ -1,11 +1,11 @@
 # ICS344 Course Project
 
 ## 📌 Group Members
-| Name            | ID        
-|-----------------|-------
-| AHMED RADWAN (Phase 3)      | 202045860
-| ABDULLA ALAHMDI (Phase 1)   | 202157210
-| HAIDAR ABUGURAIN (Phase 2)  | 202064700
+| Name            | ID             | Role
+|-----------------|-----------------------------
+| AHMED RADWAN      | 202045860    | (Phase 3) 
+| ABDULLA ALAHMDI   | 202157210    | (Phase 1) 
+| HAIDAR ABUGURAIN  | 202064700    | (Phase 2) 
 
 ---
 
