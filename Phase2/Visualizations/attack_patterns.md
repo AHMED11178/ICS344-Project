@@ -14,7 +14,7 @@ A time chart or bar chart displaying SSH login attempts over time.
 ```spl
 index=* sourcetype=syslog "sshd" | timechart count by action
 ```
-
+![screenshots](logins.png)
 **What it reveals:**
 
 * Spikes in failed or successful login attempts.
