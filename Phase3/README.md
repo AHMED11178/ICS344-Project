@@ -78,6 +78,10 @@ ssh -i ~/.ssh/metasploitable3_key -p 2222 msfadmin@192.168.56.101
 
 ### 3.1 Test Defenses
 
-Attacks to Re-Run:
+Before Defence:
+
+![](./13.png)
+
+After Defence:
 
  ![](./12.png)
