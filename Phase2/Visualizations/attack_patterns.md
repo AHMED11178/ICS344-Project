@@ -55,7 +55,7 @@ index=* sourcetype=syslog "sshd" "Failed password" OR "Accepted password"
 | eval action = if(like(_raw, "%Failed password%"), "failed", "successful")
 | stats count by action
 ```
-
+![screenshot](number of fails)
 **What it reveals:**
 
 * Demonstrates how many attempts failed before success.
