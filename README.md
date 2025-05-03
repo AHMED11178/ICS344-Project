@@ -3,9 +3,9 @@
 ## 📌 Group Members
 | Name            | ID        
 |-----------------|-------
-| AHMED RADWAN       | 202045860
-| ABDULLA ALAHMDI    | 202157210
-| HAIDAR ABUGURAIN   | 202064700
+| AHMED RADWAN (Phase 3)      | 202045860
+| ABDULLA ALAHMDI (Phase 1)   | 202157210
+| HAIDAR ABUGURAIN (Phase 2)  | 202064700
 
 ---
 
