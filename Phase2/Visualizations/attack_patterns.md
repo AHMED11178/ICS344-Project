@@ -26,7 +26,7 @@ index=* sourcetype=syslog "sshd" | timechart count by action
 ## Visualization 2: Top Source IPs
 
 **Description:**
-A pie chart or bar chart showing the top source IP addresses attempting SSH connections.
+A pie chart showing the top source IP addresses attempting SSH connections.
 
 **SPL Query:**
 
@@ -35,7 +35,7 @@ index=* sourcetype=syslog "sshd" "Failed password" OR "Accepted password"
 | rex field=_raw "from (?<src_ip>\d{1,3}(?:\.\d{1,3}){3}) port"
 | top src_ip
 ```
-
+![screenshot](ip.png)
 **What it reveals:**
 
 * Confirms that the Kali attacker machine was the primary source of SSH traffic to Metasploitable3.
